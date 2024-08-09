@@ -21,15 +21,6 @@ const initializeAndDbAndServer = async () => {
 }
 initializeAndDbAndServer()
 
-//                           API 1
-//                         User Login
-// get JWT token using jsonwebtoken package
-// const JWTToken = jwt.sign(payload,'own_secret_key');
-// payload is user information
-//     Scenarios
-// 1)Invalid user
-//  2)Invalid password
-//  3) Return the JWT Token
 app.post('/login/', async (request, response) => {
   const {username, password} = request.body
   // check user
