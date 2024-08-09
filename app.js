@@ -32,10 +32,10 @@ app.post('/login/', async (request, response) => {
       //get JWT Token
       const payload = {username: username}
       const jwtToken = jwt.sign(payload, 'vivek_secret_key')
-      response.send({jwtToken}) //Scenario 3
+      response.send({jwtToken})
     } else {
       response.status(400)
-      response.send(`Invalid password`) //Scenario 2
+      response.send(`Invalid password`) 
     }
   } else {
     response.status(400)
